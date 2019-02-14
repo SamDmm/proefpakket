@@ -24,3 +24,6 @@ dd {
 	margin-left: 0;
 	font-weight: bold;
 }
+.fout {
+	color: red;
+}

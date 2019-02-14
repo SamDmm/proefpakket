@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='nl' xmlns:th='http://www.thymeleaf.org'>
+<head th:replace="fragments::head(title='Proefpakket')"></head>
+<body>
+  <h1>Proefpakket</h1>
+  <blockquote>Een pakket bieren van een brouwer naar keuze</blockquote>
+  <img alt="brouwerij" th:src='@{/images/brouwerij.jpg}' class='fullwidth'>
+  <h1 th:text='${brouwer.naam}'></h1>
+  <dl>
+    <dt>Straat:</dt>
+    <dd th:text='${brouwer.adres.straat}'>
+    <dt>Huisnummer:</dt>
+    <dd th:text='${brouwer.adres.huisNr}'>
+    <dt>Postcode:</dt>
+    <dd th:text='${brouwer.adres.gemeente.postcode}'>
+    <dt>Gemeente:</dt>
+    <dd th:text='${brouwer.adres.gemeente.naam}'>  
+    <dt>Ondernemingsnummer:</dt>
+    <dd th:text='${brouwer.ondernemingsNr}'>
+  </dl>  
+</body>
+</html>

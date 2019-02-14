@@ -17,4 +17,22 @@ public class Gemeente implements Serializable {
 	private long id;
 	private short postcode;
 	private String naam;
+	
+	public Gemeente(short postcode, String naam) {
+		this.postcode = postcode;
+		this.naam = naam;
+	}
+	protected Gemeente() {
+	}
+	
+	public long getId() {
+		return id;
+	}
+	public short getPostcode() {
+		return postcode;
+	}
+	public String getNaam() {
+		return naam;
+	}
+	
 }

@@ -21,7 +21,7 @@ public class Brouwer implements Serializable {
 	private String naam;
 	@Embedded
 	private Adres adres;
-	private long ondernemingsNr;
+	private Long ondernemingsNr;
 	
 	public long getId() {
 		return id;
@@ -32,7 +32,7 @@ public class Brouwer implements Serializable {
 	public Adres getAdres() {
 		return adres;
 	}
-	public long getOndernemingsNr() {
+	public Long getOndernemingsNr() {
 		return ondernemingsNr;
 	}
 	

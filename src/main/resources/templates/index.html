@@ -9,7 +9,12 @@
   <div>Kies een brouwer:</div>
   <ul id='alfabet'>
     <li th:each='letter:${alfabet}'>
-      <a th:href='@{/letter=${letter})}' th:text='${letter}'></a>
+      <a th:href='@{/(letter=${letter})}' th:text='${letter}'></a>
+    </li>
+  </ul>
+  <ul>
+    <li th:each='brouwer:${brouwers}'>
+      <a th:href='@{/brouwers/{id}(id=${brouwer.id})}' th:text='${brouwer.naam}'></a>
     </li>
   </ul>
 </body>
