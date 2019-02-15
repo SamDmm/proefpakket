@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='nl' xmlns:th='http://www.thymeleaf.org'>
+<head th:replace="fragments::head(title='|Proefpakket ${brouwer.naam} (stap 1)|')"></head>
+<body>
+  <h1>Proefpakket</h1>
+  <blockquote>Een pakket bieren van een brouwer naar keuze</blockquote>
+  <img alt="brouwerij" th:src='@{/images/brouwerij.jpg}' class='fullwidth'>
+  <h1 th:text='|Proefpakket ${brouwer.naam} (stap 1)|'></h1>
+  <form th:action='@{/brouwers/{id}/proefpakket(id=${brouwer.id})}' method='post' th:object='${bestelling}'>
+    <label>
+      Voornaam:
+      <span th:if="${#fields.hasErrors('voornaam')}" th:errors='*{voornaam}'></span>
+      <input th:field='*{voornaam}' required autofocus>
+    </label>
+    <label>
+      Familienaam:
+      <span th:if="${#fields.hasErrors('familienaam')}" th:errors='*{familienaam}'></span>
+      <input th:field='*{familienaam}' required>
+    </label>
+    <label>
+      Email adres:
+      <span th:if="${#fields.hasErrors('emailAdres')}" th:errors='*{emailAdres}'></span>
+      <input th:field='*{emailAdres}' required>
+    </label>
+    <input type='submit' value='Stap 2' name='stap2'>
+  </form>
+</body>
+</html>
